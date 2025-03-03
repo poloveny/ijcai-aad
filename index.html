@@ -38,11 +38,11 @@
   <section id="hero">
     <div class="hero-container">
       <a href="index.html" class="hero-logo" data-aos="zoom-in"><img width="40%"
-          src="assets/img/CodeRush-Logo-Transparent.png" alt="" /></a>
+          src="assets/img/IJICA.png" alt="" /></a>
       <h1 data-aos="zoom-in">IJICA 2025</h1>
       <h2 data-aos="fade-up">
-        大家好！！<br />
-        欢迎大家参加我们的比赛！！
+        Auditory EEG decoding challenge<br />
+        This challenge focuses on establishing a relationship between measured brain activity (EEG) and an auditory stimulus
       </h2>
       <a data-aos="fade-up" data-aos-delay="200" href="#about" class="btn-get-started scrollto">Rush In</a>
     </div>
@@ -59,10 +59,11 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">CodeRush</a></li>
-          <li><a class="nav-link scrollto" href="#timeline">Timeline</a></li>
-          <li><a class="nav-link scrollto" href="#team">Get In Touch</a></li>
-          <li><a class="nav-link scrollto" href="#prizes">Prizes</a></li>
+          <li><a class="nav-link scrollto" href="#about">Dateset</a></li>
+          <li><a class="nav-link scrollto" href="#timeline">Task</a></li>
+          <li><a class="nav-link scrollto" href="#timeline">Registration</a></li>
+          <li><a class="nav-link scrollto" href="#team">Timeline</a></li>
+          <li><a class="nav-link scrollto" href="#prizes">Organizers</a></li>
           <li><a class="nav-link scrollto" href="./submission.html">Submission</a></li>
           <li>
             <a class="nav-link scrollto">
@@ -83,8 +84,8 @@
     <section id="about" class="about">
       <div class="container">
         <div class="section-title" data-aos="fade-up">
-          <h2>What is CodeRush 2022?</h2>
-          <p>The annual in-house coding competition of the Faculty of Information Technology</p>
+          <h2>Challenge Call</h2>
+          <p>Challenge and Scenario Description</p>
         </div>
 
         <div class="row">
@@ -96,21 +97,12 @@
           <div class="col-lg-6" data-aos="fade-left">
             <div class="content pt-4 pt-lg-0 pl-0 pl-lg-3 px-4">
               <p class="lh-lg" style="text-align: justify;">
-                CodeRush is a team-based competition launched by INTECS for the fifth consecutive time. It is an ideal
-                platform where you get to discover your
-                skills in coding and problem-solving. During this two-day hackathon, your goal is to gather your team
-                and brainstorm to untangle the solutions
-                for the enigmas presented to you. Day 01 of the competition will take place on University premises while
-                day 02 will be held online.
+                Various neuroimaging techniques can be used to investigate how the brain processes sound. Electroencephalography (EEG) is popular because it is relatively easy to conduct and has a high temporal resolution. Besides fundamental neuroscience research, EEG-based measures of auditory processing in the brain are also helpful in detecting or diagnosing potential hearing loss. They enable differential diagnosis of populations that can otherwise not be tested, such as young children or people with mental disabilities. In addition, there is a growing field of research in which auditory attention is decoded from the brain, with potential applications in smart hearing aids. An increasingly popular method in these fields is to relate a person’s electroencephalogram (EEG) to a feature of the natural speech signal they were listening to. This is typically done using linear regression to predict the EEG signal from the stimulus or to decode the stimulus from the EEG. Given the very low signal-to-noise ratio of the EEG, this is a challenging problem, and several non-linear methods have been proposed to improve upon the linear regression methods. In the Auditory-EEG challenge, teams will compete to build the best model to relate speech to EEG. We provide a large auditory EEG dataset containing data from 105 subjects who listen on average to 108 minutes of single-speaker stimuli for a total of around 200 hours of data. We define two tasks:
               </p>
               <p class="lh-lg" style="text-align: justify;">
-                The competition comprises 3 rounds. The coding round of the competition would be conducted with the
-                support of the HackerRank platform. In the
-                idea submission round, the teams have to come up with an innovative solution to a given scenario. Last
-                but not least there will be a selfie
-                challenge and voting that will be a fun experience for our competitors. This mesmerizing event is
-                exclusive to the members of the FIT family.
-                So don't pass up this wonderful opportunity.
+                Task 1 match-mismatch: given 5 segments of speech and a segment of EEG, which segment of speech matches the EEG?
+
+                Task 2 regression: reconstruct the mel spectorgram from the EEG. We provide the dataset, code for preprocessing the EEG and for creating commonly used stimulus representations, and two baseline methods.
               </p>
               <div style="background-color: #1f4385;" class="mx-5 rounded">
                 <h3 style="color:#fff;font-size: 30px;" class="text-uppercase my-5 py-2 text-center font-weight-bold">
