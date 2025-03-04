@@ -178,39 +178,71 @@
     <section id="pricing" class="pricing section-bg">
       <div class="container">
         <div class="row">
-          
+      
+          <!-- Data Description 标题 -->
           <div style="background-color: #1f4385;" class="mx-5 rounded">
-            <h3 style="color:#fff;font-size: 30px;" class="text-uppercase my-5 py-2 text-center font-weight-bold">
-                Data description</h3>
-          </div>
-          <!-- 第一个模块 -->
+            <h3 style="color:#fff;font-size: 36px;" class="text-uppercase my-5 py-3 text-center font-weight-bold">
+                Data Description</h3>
+            </div>
+
+          <!-- 第一个数据集模块 -->
           <div class="col-lg-6 col-md-6">
             <div class="box" data-aos="zoom-in" data-aos-delay="100" style="height:100%">
               <div class="card col border-0" style="color: rgb(255, 245, 245); background-color: #1f4385; height:100%;">
-                <i class='bx bx-laptop' style="font-size:70px"></i> <!-- 图标与第二个模块保持一致 -->
+                <i class='bx bx-laptop' style="font-size:70px"></i> <!-- 统一图标 -->
                 <div class="card-body text-center">
-                  <h5 class="card-title">data_for_SS</h5>
-                  <p class="card-text">The zipfile is only suitable for single-subject (SS) tasks and contains data for each subject in each of two scenes(audio-only and audio-video), which have been preprocessed and divided into training and validation sets. <strong>The pdf in the zipfile contains a detailed description of this task.</strong></p>
+                  <h5 class="card-title" style="font-size: 24px;">data_for_SS</h5>
+                  <p class="card-text" style="font-size: 16px; text-align: justify;">
+                    The zipfile is only suitable for single-subject (SS) tasks and contains data for each subject in each of two scenes (audio-only and audio-video), which have been preprocessed and divided into training and validation sets. 
+                    <strong>The pdf in the zipfile contains a detailed description of this task.</strong>
+                  </p>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- 第二个模块 -->
+          <!-- 第二个数据集模块 -->
           <div class="col-lg-6 col-md-6">
             <div class="box" data-aos="zoom-in" style="height:100%">
               <div class="card col border-0" style="color: rgb(255, 245, 245); background-color: #1f4385;">
-                <i class='bx bx-laptop' style="font-size:70px"></i> <!-- 图标与第一个模块保持一致 -->
+                <i class='bx bx-laptop' style="font-size:70px"></i> <!-- 统一图标 -->
                 <div class="card-body text-center">
-                  <h5 class="card-title">data_for_CS</h5>
-                  <p class="card-text">The zipfile is only suitable for cross-subject (CS) tasks and contains complete data for 8 subject in each of two scenes(audio-only and audio-video), without dividing the training set and the validation set, and the participants are left with one cross-validation according to their needs. <strong>The pdf in the zipfile contains a detailed description of this task.</strong></p>
+                  <h5 class="card-title" style="font-size: 24px;">data_for_CS</h5>
+                  <p class="card-text" style="font-size: 16px; text-align: justify;">
+                    The zipfile is only suitable for cross-subject (CS) tasks and contains complete data for 8 subjects in each of two scenes (audio-only and audio-video), without dividing the training set and the validation set, and the participants are left with one cross-validation according to their needs. 
+                    <strong>The pdf in the zipfile contains a detailed description of this task.</strong>
+                  </p>
                 </div>
               </div>
             </div>
           </div>
+
         </div>
+
+        <!-- Evaluation Metric 部分 -->
+        <div class="row mt-5">
+          <div class="col-12">
+            <h3 style="font-size: 28px; font-weight: bold; margin-bottom: 20px;">Evaluation Metric</h3>
+            <!-- 公式图片 -->
+            <div class="text-center">
+              <img src="assets/img/evaluation_formula.png" alt="Evaluation Formula" style="max-width: 100%; height: auto;">
+            </div>
+            <!-- 公式说明 -->
+            <p style="font-size: 16px; text-align: justify; margin-top: 20px;">
+              <strong>CorrectTestSamples：</strong> The number of test samples in a subject that correctly identify the direction of auditory attention.
+            </p>
+            <p style="font-size: 16px; text-align: justify;">
+              <strong>TotalTestSamples：</strong> The total number of test samples given by a subject.
+            </p>
+            <p style="font-size: 16px; text-align: justify;">
+              <strong>Subs：</strong> The total number of test subjects given by each track.
+            </p>
+          </div>
+        </div>
+
       </div>
     </section>
+
 
     <!-- ======= Featured Section ======= -->
 
