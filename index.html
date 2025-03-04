@@ -39,11 +39,16 @@
     <div class="hero-container">
       <a href="index.html" class="hero-logo" data-aos="zoom-in"><img width="40%"
           src="assets/img/IJICA.png" alt="" /></a>
-      <h1 data-aos="zoom-in">IJICA 2025</h1>
-      <h2 data-aos="fade-up">
+      <!-- 主标题 -->
+      <h1 data-aos="zoom-in" style="font-size: 4rem; font-weight: bold;">ChineseAAD 2025</h1>
+    
+      <!-- 副标题 -->
+      <h2 data-aos="fade-up" 
+          style="color: #fff; font-size: 1.8rem; font-weight: bold; line-height: 1.6;">
         Auditory EEG decoding challenge<br />
         This challenge focuses on establishing a relationship between measured brain activity (EEG) and an auditory stimulus
       </h2>
+      <!-- 按钮 -->
       <a data-aos="fade-up" data-aos-delay="200" href="#about" class="btn-get-started scrollto">Rush In</a>
     </div>
   </section>
@@ -100,10 +105,10 @@
             <div class="content pt-4 pt-lg-0 pl-0 pl-lg-3 px-4 text-center"> <!-- 添加 text-center 使文字居中 -->
             <!--<div class="content pt-4 pt-lg-0 pl-0 pl-lg-3 px-4">-->
               <p class="lh-lg" style="text-align: justify;">
-                A cocktail party is an interesting scene that manifests itself as the voices of multiple speakers mixed, as if at a raucous social gathering. The challenge in this scene is to find a way to identify the sound source of interest to the listener when multiple sound sources are present at the same time. In recent years, the study of auditory attention decoding(AAD) based on EEG signals has become a very promising solution, which is devoted to decoding the speech/spatial orientation of the listener from the EEG signal in the multi-speaker scene. One of the tasks of auditory attention decoding is to identify and locate the spatial orientation of the speaker in the multi-person speaking environment by analyzing the EEG signal of the listener. Therefore, when an efficient and robust auditory attention decoding algorithm is integrated into the hearing aid device, it can help the hearing impaired to capture the target sound more accurately, ignore the interfering sound, and improve the hearing performance in the multi-speaker scene. Since the existing public datasets are all EEG data of subjects collected in scenes with only auditory stimuli, auditory attention in real scenes is usually accompanied by visual and auditory input at the same time. 
+                A cocktail party is an interesting scene that manifests itself as the voices of multiple speakers mixed, as if at a raucous social gathering. The challenge in this scene is to find a way to identify the sound source of interest to the listener when multiple sound sources are present at the same time. In recent years, the study of <strong>auditory attention decoding (AAD)</strong> based on EEG signals has become a very promising solution, which is devoted to decoding the speech/spatial orientation of the listener from the EEG signal in the multi-speaker scene. One of the tasks of auditory attention decoding is to identify and locate the spatial orientation of the speaker in the multi-person speaking environment by analyzing the EEG signal of the listener. Therefore, when an efficient and robust auditory attention decoding algorithm is integrated into the hearing aid device, it can help the hearing impaired to capture the target sound more accurately, ignore the interfering sound, and improve the hearing performance in the multi-speaker scene. Since the existing public datasets are all EEG data of subjects collected in scenes with only auditory stimuli, auditory attention in real scenes is usually accompanied by visual and auditory input at the same time. 
               </p>
               <p class="lh-lg" style="text-align: justify;">
-                We provide an AHU dataset consisting of EEG data collected from 10 subjects each in the audio-only scene, the audio-video scene, who listened to the two-speaker stimulus for an average of 40 minutes, totaling about 13.3 hours of data. In the chinese auditory attention decoding challenge, the team will compete to build the best deep learning model to analyze the spatial orientation (left/right, 0/1) of the subject's attention to the speaker from the EEG signal.
+                We provide an <strong>AHU dataset</strong> consisting of EEG data collected from 10 subjects each in the audio-only scene, the audio-video scene, who listened to the two-speaker stimulus for an average of 40 minutes, totaling about 13.3 hours of data. In the chinese auditory attention decoding challenge, the team will compete to build the best deep learning model to analyze the spatial orientation (left/right, 0/1) of the subject's attention to the speaker from the EEG signal.
               </p>
               <div style="background-color: #1f4385;" class="mx-5 rounded">
                 <!--
@@ -117,7 +122,7 @@
     </section>
     <!-- End About Us Section -->
     
-    <!-- ======= Task Section ======= -->
+    <!--Task Section 被注释掉了
     <section id="task" class="task">
       <div class="container">
         <div class="section-title" data-aos="fade-up">
@@ -147,7 +152,57 @@
         </div>
       </div>
     </section>
+     End Task Section -->
+    
+    <!-- ======= Task Section ======= -->
+    <section id="task" class="task">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2>Tracks Overview</h2>
+          <p>Details about the Tracks to be completed</p>
+        </div>
+        <div class="row">
+          <div class="col-lg-12" data-aos="fade-left">
+            <div class="content pt-4 pt-lg-0 pl-0 pl-lg-3 px-4 text-center">
+              <p class="lh-lg" style="text-align: justify;">
+                <strong>Track 1.</strong> Single-subject (SS): The audio-only task and audio-video task are included. 
+                The data of each subject is divided into training, validation, and testing according to 8:1:1. 
+                The goal of participants is to build a single-subject decoding model, calculate the accuracy for each subject on the test set, 
+                and finally get an average decoding accuracy (%).
+              </p>
+              <p class="lh-lg" style="text-align: justify;">
+                <span style="margin-left: 20px;"><strong>Track 1.1.</strong> audio-only task (SS-AO): Average decoding accuracy (%) for 
+                <strong>8 subjects</strong> in the audio-only scene.</span>
+              </p>
+              <p class="lh-lg" style="text-align: justify;">
+                <span style="margin-left: 20px;"><strong>Track 1.2.</strong> audio-video task (SS-AV): Average decoding accuracy (%) for 
+                <strong>8 subjects</strong> in the audio-video scene.</span>
+              </p>
+              <p class="lh-lg" style="text-align: justify;">
+                <strong>Track 2.</strong> Cross-subject (CS): The audio-only task and audio-video task are included. 
+                Each scene gives data on <strong>8 subjects</strong> for training and validation, and <strong>2</strong> for testing. 
+                The goal of participants is to build a cross-subject decoding model, calculate the decoding accuracy of each subject in the test set, 
+                and finally obtain the average decoding accuracy (%).
+              </p>
+              <p class="lh-lg" style="text-align: justify;">
+                <span style="margin-left: 20px;"><strong>Track 2.1.</strong> audio-only task (CS-AO): Average decoding accuracy (%) for 
+                <strong>2 subjects</strong> in the audio-only scene.</span>
+              </p>
+              <p class="lh-lg" style="text-align: justify;">
+                <span style="margin-left: 20px;"><strong>Track 2.2.</strong> audio-video task (CS-AV): Average decoding accuracy (%) for 
+                <strong>2 subjects</strong> in the audio-video scene.</span>
+              </p>
+              <div style="background-color: #1f4385;" class="mx-5 rounded">
+                <h3 style="color:#fff;font-size: 30px;" class="text-uppercase my-5 py-2 text-center font-weight-bold">
+                    Good luck to all participants!</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- End Task Section -->
+
     
     <section id="pricing" class="pricing section-bg">
       <div class="container">
@@ -383,7 +438,7 @@
               </div>
               <div class="member-info">
                 <h4>Sigi Cai</h4>
-                <span>National University of Singapore</span>
+                <span>The Chinese University of Hong Kong (Shenzhen), China</span>
                 <p>Email: sigi.cai@nus.edu.sg</p>
               </div>
             </div>
@@ -447,61 +502,57 @@
     <section class="prizes" id="prizes">
       <div class="container" data-aos="fade-up">
         <div class="section-title" data-aos="fade-up">
-          <h2 class="mb-5 font-weight-bold">Secretariat</h2>
+          <h2 class="mb-5 font-weight-bold text-center">Secretariat</h2>
         </div>
-        <div class="row align-items-center justify-content-center px-5">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4 justify-content-center">
           <!-- Secretariat Member 1 -->
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="zoom-in" data-aos-delay="100">
+          <div class="col d-flex align-items-stretch">
+            <div class="member text-center" data-aos="zoom-in" data-aos-delay="100">
               <div class="member-img">
-                <img src="assets/img/team/Zhanghongyu.jpg" class="img-fluid rounded" alt="" />
+                <img src="assets/img/team/Zhanghongyu.jpg" class="img-fluid rounded" style="width: 100%; height: 250px; object-fit: cover;" alt="Hongyu Zhang" />
               </div>
-              <div class="member-info text-center p-4">
+              <div class="member-info p-3">
                 <h4>Hongyu Zhang</h4>
                 <span>Anhui University, China</span>
-                
               </div>
             </div>
           </div>
 
           <!-- Secretariat Member 2 -->
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="zoom-in" data-aos-delay="200">
+          <div class="col d-flex align-items-stretch">
+            <div class="member text-center" data-aos="zoom-in" data-aos-delay="200">
               <div class="member-img">
-                <img src="assets/img/team/Yangxiaoke.jpg" class="img-fluid rounded" alt="" />
+                <img src="assets/img/team/Yangxiaoke.jpg" class="img-fluid rounded" style="width: 100%; height: 250px; object-fit: cover;" alt="Xiaoke Yang" />
               </div>
-              <div class="member-info text-center p-4">
+              <div class="member-info p-3">
                 <h4>Xiaoke Yang</h4>
                 <span>Anhui University, China</span>
-                
               </div>
             </div>
           </div>
 
           <!-- Secretariat Member 3 -->
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="zoom-in" data-aos-delay="300">
+          <div class="col d-flex align-items-stretch">
+            <div class="member text-center" data-aos="zoom-in" data-aos-delay="300">
               <div class="member-img">
-                <img src="assets/img/team/Dongxingguang.jpg" class="img-fluid rounded" alt="" />
+                <img src="assets/img/team/Dongxingguang.jpg" class="img-fluid rounded" style="width: 100%; height: 250px; object-fit: cover;" alt="Xingguang Dong" />
               </div>
-              <div class="member-info text-center p-4">
+              <div class="member-info p-3">
                 <h4>Xingguang Dong</h4>
                 <span>Anhui University, China</span>
-                
               </div>
             </div>
           </div>
 
           <!-- Secretariat Member 4 -->
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="zoom-in" data-aos-delay="400">
+          <div class="col d-flex align-items-stretch">
+            <div class="member text-center" data-aos="zoom-in" data-aos-delay="400">
               <div class="member-img">
-                <img src="assets/img/team/Gaomengyuan.jpg" class="img-fluid rounded" alt="" />
+                <img src="assets/img/team/Gaomengyuan.jpg" class="img-fluid rounded" style="width: 100%; height: 250px; object-fit: cover;" alt="Mengyuan Gao" />
               </div>
-              <div class="member-info text-center p-4">
+              <div class="member-info p-3">
                 <h4>Mengyuan Gao</h4>
                 <span>Anhui University, China</span>
-                
               </div>
             </div>
           </div>
@@ -509,6 +560,7 @@
       </div>
     </section>
     <!-- End Secretariat Section -->
+
   </main>
   <!-- End #main -->
 
