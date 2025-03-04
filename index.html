@@ -60,7 +60,7 @@
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#task">Task</a></li>
+          <li><a class="nav-link scrollto" href="#task">Tracks</a></li>
           <li><a class="nav-link scrollto" href="#timeline">Registration</a></li>
           <li><a class="nav-link scrollto" href="#team">Timeline</a></li>
           <li><a class="nav-link scrollto" href="#prizes">Organizers</a></li>
@@ -100,16 +100,15 @@
             <div class="content pt-4 pt-lg-0 pl-0 pl-lg-3 px-4 text-center"> <!-- 添加 text-center 使文字居中 -->
             <!--<div class="content pt-4 pt-lg-0 pl-0 pl-lg-3 px-4">-->
               <p class="lh-lg" style="text-align: justify;">
-                Various neuroimaging techniques can be used to investigate how the brain processes sound. Electroencephalography (EEG) is popular because it is relatively easy to conduct and has a high temporal resolution. Besides fundamental neuroscience research, EEG-based measures of auditory processing in the brain are also helpful in detecting or diagnosing potential hearing loss. They enable differential diagnosis of populations that can otherwise not be tested, such as young children or people with mental disabilities. In addition, there is a growing field of research in which auditory attention is decoded from the brain, with potential applications in smart hearing aids. An increasingly popular method in these fields is to relate a person’s electroencephalogram (EEG) to a feature of the natural speech signal they were listening to. This is typically done using linear regression to predict the EEG signal from the stimulus or to decode the stimulus from the EEG. Given the very low signal-to-noise ratio of the EEG, this is a challenging problem, and several non-linear methods have been proposed to improve upon the linear regression methods. In the Auditory-EEG challenge, teams will compete to build the best model to relate speech to EEG. We provide a large auditory EEG dataset containing data from 105 subjects who listen on average to 108 minutes of single-speaker stimuli for a total of around 200 hours of data. We define two tasks:
+                A cocktail party is an interesting scene that manifests itself as the voices of multiple speakers mixed, as if at a raucous social gathering. The challenge in this scene is to find a way to identify the sound source of interest to the listener when multiple sound sources are present at the same time. In recent years, the study of auditory attention decoding(AAD) based on EEG signals has become a very promising solution, which is devoted to decoding the speech/spatial orientation of the listener from the EEG signal in the multi-speaker scene. One of the tasks of auditory attention decoding is to identify and locate the spatial orientation of the speaker in the multi-person speaking environment by analyzing the EEG signal of the listener. Therefore, when an efficient and robust auditory attention decoding algorithm is integrated into the hearing aid device, it can help the hearing impaired to capture the target sound more accurately, ignore the interfering sound, and improve the hearing performance in the multi-speaker scene. Since the existing public datasets are all EEG data of subjects collected in scenes with only auditory stimuli, auditory attention in real scenes is usually accompanied by visual and auditory input at the same time. 
               </p>
               <p class="lh-lg" style="text-align: justify;">
-                Task 1 match-mismatch: given 5 segments of speech and a segment of EEG, which segment of speech matches the EEG?
-
-                Task 2 regression: reconstruct the mel spectorgram from the EEG. We provide the dataset, code for preprocessing the EEG and for creating commonly used stimulus representations, and two baseline methods.
+                We provide an AHU dataset consisting of EEG data collected from 10 subjects each in the audio-only scene, the audio-video scene, who listened to the two-speaker stimulus for an average of 40 minutes, totaling about 13.3 hours of data. In the chinese auditory attention decoding challenge, the team will compete to build the best deep learning model to analyze the spatial orientation (left/right, 0/1) of the subject's attention to the speaker from the EEG signal.
               </p>
               <div style="background-color: #1f4385;" class="mx-5 rounded">
+                <!--
                 <h3 style="color:#fff;font-size: 30px;" class="text-uppercase my-5 py-2 text-center font-weight-bold">
-                  May the best team win!</h3>
+                  May the best team win!</h3> -->
               </div>
             </div>
           </div>
@@ -122,18 +121,22 @@
     <section id="task" class="task">
       <div class="container">
         <div class="section-title" data-aos="fade-up">
-          <h2>Task Overview</h2>
-          <p>Details about the tasks to be completed</p>
+          <h2>Tracks Overview</h2>
+          <p>Details about the Tracks to be completed</p>
         </div>
 
         <div class="row">
           <div class="col-lg-12" data-aos="fade-left">
             <div class="content pt-4 pt-lg-0 pl-0 pl-lg-3 px-4 text-center"> <!-- 添加 text-center 使文字居中 -->
               <p class="lh-lg" style="text-align: justify;">
-              111
+                Track 1. Single-subject (SS): The audio-only task and audio-video task are included. The data of each subject is divided into training, validation, and testing according to 8:1:1. The goal of participants is to build a single-subject decoding model, calculate the accuracy for each subject on the test set, and finally get an average decoding accuracy (%).
+                    Track 1.1. audio-only task (SS-AO): Average decoding accuracy (%) for 8 subjects in the audio-only scene.
+                    Track 1.2. audio-video task (SS-AV): Average decoding accuracy (%) for 8 subjects in the audio-video scene.
               </p>
               <p class="lh-lg" style="text-align: justify;">
-              222
+                Track 2. Cross-subject (CS): The audio-only task and audio-video task are included. Each scene gives data on 8 subjects for training and validation, and 2 for testing. The goal of participants is to build a cross-subject decoding model, calculate the decoding accuracy of each subject in the test set, and finally obtain the average decoding accuracy (%).
+                    Track 2.1. audio-only task (CS-AO): Average decoding accuracy (%) for 2 subjects in the audio-only scene.
+                    Track 2.2. audio-video task (CS-AV): Average decoding accuracy (%) for 2 subjects in the audio-video scene.
               </p>
               <div style="background-color: #1f4385;" class="mx-5 rounded">
                 <h3 style="color:#fff;font-size: 30px;" class="text-uppercase my-5 py-2 text-center font-weight-bold">
@@ -148,47 +151,31 @@
     
     <section id="pricing" class="pricing section-bg">
       <div class="container">
-
         <div class="row">
-          <div class="col-lg-4 col-md-6" >
+          <!-- 第一个模块 -->
+          <div class="col-lg-6 col-md-6">
             <div class="box" data-aos="zoom-in" data-aos-delay="100" style="height:100%">
-              <div class="card col border-0" style="color: rgb(255, 245, 245); background-color: #1f4385; height:100%;">               
-                <i class='bx bxs-brain' style="font-size:70px"></i>
+              <div class="card col border-0" style="color: rgb(255, 245, 245); background-color: #1f4385; height:100%;">
+                <i class='bx bx-laptop' style="font-size:70px"></i> <!-- 图标与第二个模块保持一致 -->
                 <div class="card-body text-center">
                   <h5 class="card-title">data1</h5>
                   <p class="card-text">对数据集1的描述</p>
-                  <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 mt-4 mt-md-0">
+          <!-- 第二个模块 -->
+          <div class="col-lg-6 col-md-6">
             <div class="box" data-aos="zoom-in" style="height:100%">
               <div class="card col border-0" style="color: rgb(255, 245, 245); background-color: #1f4385;">
-                <i class='bx bx-laptop' style="font-size:70px"></i>
+                <i class='bx bx-laptop' style="font-size:70px"></i> <!-- 图标与第一个模块保持一致 -->
                 <div class="card-body text-center">
                   <h5 class="card-title">data2</h5>
-                  <p class="card-text">
-                    对数据集2的描述
-                  </p>
+                  <p class="card-text">对数据集2的描述</p>
                 </div>
               </div>
             </div>
-          </div>
-          <!--
-          <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
-            <div class="box" data-aos="zoom-in" data-aos-delay="100" style="height:100%">
-              <div class="card col border-0" style="color: rgb(255, 245, 245); background-color: #1f4385;">
-                <i class='bx bx-happy-beaming' style="font-size:70px" ></i>
-                <div class="card-body text-center ">
-                  <h5 class="card-title">Fun</h5>
-                  <p class="card-text">You can have fun with your friends during this competition while going
-                    head-to-head with them.</p>
-                </div>
-              </div>
-            </div>
-            -->
           </div>
         </div>
       </div>
@@ -364,7 +351,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="member" data-aos="zoom-in" data-aos-delay="100">
               <div class="member-img">
-                <img src="assets/img/team/Fancunhang.jpg" class="img-fluid" alt="" />
+                <img src="assets/img/team/Fancunhang.jpg" class="img-fluid" alt="" style="width: 100%; height: 300px; object-fit: cover;" />
               </div>
               <div class="member-info">
                 <h4>Cunhang Fan</h4>
@@ -378,7 +365,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="member" data-aos="zoom-in">
               <div class="member-img">
-                <img src="assets/img/team/Lvzhao.jpg" class="img-fluid" alt="" />
+                <img src="assets/img/team/Lvzhao.jpg" class="img-fluid" alt="" style="width: 100%; height: 300px; object-fit: cover;" />
               </div>
               <div class="member-info">
                 <h4>Zhao Lv</h4>
@@ -392,7 +379,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="member" data-aos="zoom-in" data-aos-delay="200">
               <div class="member-img">
-                <img src="assets/img/team/Caisiqi.jpg" class="img-fluid" alt="" />
+                <img src="assets/img/team/Caisiqi.jpg" class="img-fluid" alt="" style="width: 100%; height: 300px; object-fit: cover;" />
               </div>
               <div class="member-info">
                 <h4>Sigi Cai</h4>
@@ -406,7 +393,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="member" data-aos="zoom-in" data-aos-delay="100">
               <div class="member-img">
-                <img src="assets/img/team/Lujiang.jpg" class="img-fluid" alt="" />
+                <img src="assets/img/team/Lujiang.jpg" class="img-fluid" alt="" style="width: 100%; height: 300px; object-fit: cover;" />
               </div>
               <div class="member-info">
                 <h4>Jing Lu</h4>
@@ -420,12 +407,12 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="member" data-aos="zoom-in">
               <div class="member-img">
-                <img src="assets/img/team/Chenjingdong.jpg" class="img-fluid" alt="" />
+                <img src="assets/img/team/Chenjingdong.jpg" class="img-fluid" alt="" style="width: 100%; height: 300px; object-fit: cover;" />
               </div>
               <div class="member-info">
                 <h4>陈景东</h4>
                 <span>Northwestern Polytechnical University</span>
-                <p>Email:jingdong.chen@nwpu.edu.cn</p>
+                <p>Email: jingdong.chen@nwpu.edu.cn</p>
               </div>
             </div>
           </div>
@@ -467,12 +454,12 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="member" data-aos="zoom-in" data-aos-delay="100">
               <div class="member-img">
-                <img src="assets/img/secretariat/member_1.jpg" class="img-fluid rounded" alt="" />
+                <img src="assets/img/team/Zhanghongyu.jpg" class="img-fluid rounded" alt="" />
               </div>
               <div class="member-info text-center p-4">
-                <h4>Member Name 1</h4>
-                <span>Position/Role</span>
-                <p>Email: member1@example.com</p>
+                <h4>Hongyu Zhang</h4>
+                <span>Anhui University, China</span>
+                
               </div>
             </div>
           </div>
@@ -481,12 +468,12 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="member" data-aos="zoom-in" data-aos-delay="200">
               <div class="member-img">
-                <img src="assets/img/secretariat/member_2.jpg" class="img-fluid rounded" alt="" />
+                <img src="assets/img/team/Yangxiaoke.jpg" class="img-fluid rounded" alt="" />
               </div>
               <div class="member-info text-center p-4">
-                <h4>Member Name 2</h4>
-                <span>Position/Role</span>
-                <p>Email: member2@example.com</p>
+                <h4>Xiaoke Yang</h4>
+                <span>Anhui University, China</span>
+                
               </div>
             </div>
           </div>
@@ -495,12 +482,12 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="member" data-aos="zoom-in" data-aos-delay="300">
               <div class="member-img">
-                <img src="assets/img/secretariat/member_3.jpg" class="img-fluid rounded" alt="" />
+                <img src="assets/img/team/Dongxingguang.jpg" class="img-fluid rounded" alt="" />
               </div>
               <div class="member-info text-center p-4">
-                <h4>Member Name 3</h4>
-                <span>Position/Role</span>
-                <p>Email: member3@example.com</p>
+                <h4>Xingguang Dong</h4>
+                <span>Anhui University, China</span>
+                
               </div>
             </div>
           </div>
@@ -509,26 +496,12 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="member" data-aos="zoom-in" data-aos-delay="400">
               <div class="member-img">
-                <img src="assets/img/secretariat/member_4.jpg" class="img-fluid rounded" alt="" />
+                <img src="assets/img/team/Gaomengyuan.jpg" class="img-fluid rounded" alt="" />
               </div>
               <div class="member-info text-center p-4">
-                <h4>Member Name 4</h4>
-                <span>Position/Role</span>
-                <p>Email: member4@example.com</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Secretariat Member 5 -->
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="zoom-in" data-aos-delay="500">
-              <div class="member-img">
-                <img src="assets/img/secretariat/member_5.jpg" class="img-fluid rounded" alt="" />
-              </div>
-              <div class="member-info text-center p-4">
-                <h4>Member Name 5</h4>
-                <span>Position/Role</span>
-                <p>Email: member5@example.com</p>
+                <h4>Mengyuan Gao</h4>
+                <span>Anhui University, China</span>
+                
               </div>
             </div>
           </div>
