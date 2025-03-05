@@ -1266,30 +1266,12 @@ section {
 .team .member {
   margin-bottom: 20px;
   overflow: hidden;
-  border-radius: 10px; /* 添加圆角 */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影 */
-  transition: transform 0.3s ease; /* 添加过渡效果 */
-}
-
-.team .member:hover {
-  transform: translateY(-5px); /* 悬停时向上移动 */
 }
 
 .team .member .member-img {
   position: relative;
   overflow: hidden;
-  border-radius: 10px 10px 0 0; /* 仅顶部添加圆角 */
-}
-
-.team .member .member-img img {
-  width: 100%;
-  height: 300px; /* 统一图片高度 */
-  object-fit: cover;
-  transition: transform 0.3s ease; /* 添加图片过渡效果 */
-}
-
-.team .member .member-img:hover img {
-  transform: scale(1.1); /* 悬停时图片放大 */
+  border-radius: 5px;
 }
 
 .team .member .social {
@@ -1328,30 +1310,25 @@ section {
   margin: 0 2px;
 }
 
-.team .member .member-info {
-  padding: 20px; /* 添加内边距 */
-}
-
 .team .member .member-info h4 {
   font-weight: 700;
-  margin-bottom: 5px;
-  font-size: 20px; /* 增大字体大小 */
-  color: #1f4385; /* 设置标题颜色 */
+  margin: 15px 0 5px 0;
+  font-size: 18px;
 }
 
 .team .member .member-info span {
   display: block;
-  font-size: 14px;
+  font-size: 13px;
   text-transform: uppercase;
   font-weight: 400;
-  margin-bottom: 10px;
-  color: #555; /* 设置副标题颜色 */
+  margin-bottom: 15px;
+  color: #1f4385;
 }
 
 .team .member .member-info p {
   font-style: italic;
   font-size: 14px;
-  line-height: 20px; /* 调整行高 */
+  line-height: 6px;
   color: #888888;
 }
 
