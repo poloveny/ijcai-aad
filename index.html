@@ -241,10 +241,10 @@
               <div class="card col border-0" style="color: rgb(255, 245, 245); background-color: #1f4385; height:100%;">
                 <i class='bx bx-laptop' style="font-size:70px"></i> <!-- 统一图标 -->
                 <div class="card-body text-center">
-                  <h5 class="card-title" style="font-size: 24px;">data_for_SS</h5>
+                  <h5 class="card-title" style="font-size: 24px;">data_for_cross_subject(.zip)</h5>
                   <p class="card-text" style="font-size: 16px; text-align: justify;">
-                    The zipfile is only suitable for single-subject (SS) tasks and contains data for each subject in each of two scenes (audio-only and audio-video), which have been preprocessed and divided into training and validation sets. 
-                    <strong>The pdf in the zipfile contains a detailed description of this task.</strong>
+                    The zipfile is only suitable for cross-subject task and contains complete raw and preprocessed data for 30 subjects in audio-visual scene. The data are not pre-divided into training and validation sets. Participants are required to perform their own cross-validation as needed. 
+                    <strong>A detailed description of the task requirements and dataset specifications is provided in a PDF document within the zipfile.</strong>strong>
                   </p>
                 </div>
               </div>
@@ -257,10 +257,10 @@
               <div class="card col border-0" style="color: rgb(255, 245, 245); background-color: #1f4385;">
                 <i class='bx bx-laptop' style="font-size:70px"></i> <!-- 统一图标 -->
                 <div class="card-body text-center">
-                  <h5 class="card-title" style="font-size: 24px;">data_for_CS</h5>
+                  <h5 class="card-title" style="font-size: 24px;">data_for_cross_session(.zip):</h5>
                   <p class="card-text" style="font-size: 16px; text-align: justify;">
-                    The zipfile is only suitable for cross-subject (CS) tasks and contains complete data for 8 subjects in each of two scenes (audio-only and audio-video), without dividing the training set and the validation set, and the participants are left with one cross-validation according to their needs. 
-                    <strong>The pdf in the zipfile contains a detailed description of this task.</strong>
+                    This zip file is designed for cross-session tasks and includes both raw and preprocessed data for 30 subjects in audio-only and audio-visual scenes. For each subject, the data from the audio-visual scene serves as the training set, while the data from the audio-only scene serves as the validation set. 
+                    <strong>A detailed description of the task requirements and dataset specifications is provided in a PDF document within the zipfile.</strong>
                   </p>
                 </div>
               </div>
@@ -296,6 +296,7 @@
       </div>
     </section>
 
+
     <!-- ======= Registration Section ======= -->
     <section id="registration" class="registration">
       <div class="container">
@@ -305,55 +306,64 @@
         </div>
         <div class="row">
           <div class="col-lg-12" data-aos="fade-left">
-            <div class="content pt-4 pt-lg-0 pl-0 pl-lg-3 px-4 text-center">
-              <p class="lh-lg" style="text-align: justify;">
-                <strong>Step 1.</strong> Participants are requested to register for the evaluation. Registration should be performed once only for each participating entity using the 
-                <strong>
-                  <a href="https://docs.google.com/forms/d/e/1FAIpQLScV0uCxsnBEWe1boUMUzQZtXEpmSsiRw0DOlqMAfLIIqPJ71A/viewform?usp=dialog" target="_blank">Registration Form</a>
-                </strong>. 
-                The form includes the following information:
-                <ul style="text-align: left; margin-left: 40px;">
-                  <li>Name of the team</li>
+            <div class="content pt-4 pt-lg-0 pl-0 pl-lg-3 px-4">
+              <div class="registration-step">
+                <h3>Step 1: Registration</h3>
+                <p>
+                  Teams wishing to participate in the challenge should register via the provided 
+                  <strong>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScV0uCxsnBEWe1boUMUzQZtXEpmSsiRw0DOlqMAfLIIqPJ71A/viewform?usp=dialog" target="_blank">Registration Form</a>
+                  </strong>. 
+                  Please submit the following details for each participant:
+                </p>
+                <ul>
+                  <li>Team name</li>
                   <li>Team member's name</li>
                   <li>Organization</li>
                   <li>Email address</li>
                 </ul>
-                Upon completion of the registration, you will receive the download address of the data.
-              </p>
-              <p class="lh-lg" style="text-align: justify;">
-                <strong>Dataset Citation:</strong>
-                <br>
-                Hongyu Zhang; Jingjing Zhang; Xingguang Dong; Zhao Lv; Jianhua Tao; Jian Zhou; Xiaopei Wu; Cunhang Fan, Based on audio-video evoked auditory attention detection electroencephalogram dataset. Journal of Tsinghua University (Science and Technology).
-              </p>
-              <p class="lh-lg" style="text-align: justify;">
-                <strong>Step 2.</strong> Baseline code download:
-                <br>
-                The experiments in both tracks use the <strong>DBPNet model</strong> as a baseline.
-                <ul style="text-align: left; margin-left: 40px;">
+                <p>Upon completion of the registration, you will receive the download address of the data.</p>
+              </div>
+
+              <div class="registration-step">
+                <h3>Step 2: Baseline Code and Dataset</h3>
+                <p>
+                  The experiments for both tracks will utilize the <strong>DARNet model (NeurIPS 2024)</strong> as a baseline. 
+                  Access to the baseline code and relevant research paper can be found at the following links:
+                </p>
+                <ul>
                   <li>
-                    <strong>Paper link:</strong>
-                    <a href="https://github.com/fchest/fchest.github.io/blob/master/pub/DBPNet_Dual-Branch_Parallel_Network_with_Temporal-Frequency_Fusion.pdf" target="_blank">
-                      https://github.com/fchest/fchest.github.io/blob/master/pub/DBPNet_Dual-Branch_Parallel_Network_with_Temporal-Frequency_Fusion.pdf
+                    <strong>Paper:</strong>
+                    <a href="https://proceedings.neurips.cc/paper_files/paper/2024/hash/382066d1460144ddcb041f32d05de053-Abstract-Conference.html" target="_blank">
+                      https://proceedings.neurips.cc/paper_files/paper/2024/hash/382066d1460144ddcb041f32d05de053-Abstract-Conference.html
                     </a>
                   </li>
                   <li>
-                    <strong>Code link:</strong>
-                    <a href="https://github.com/fchest/DBPNet" target="_blank">
-                      https://github.com/fchest/DBPNet
+                    <strong>Code:</strong>
+                    <a href="https://github.com/fchest/DARNet" target="_blank">
+                      https://github.com/fchest/DARNet
                     </a>
-                  </li>
-                  <li>
-                    <strong>Paper citation:</strong>
-                    <br>
-                    Qinke Ni; Hongyu Zhang; Cunhang Fan; Shengbing Pei; Chang Zhou; Zhao Lv, DBPNet: Dual-Branch Parallel Network with Temporal-Frequency Fusion for Auditory Attention Detection. International Joint Conference on Artificial Intelligence (IJCAI 2024).
                   </li>
                 </ul>
-              </p>
-              <!--
-              <div style="background-color: #1f4385;" class="mx-5 rounded">
-                <h3 style="color:#fff;font-size: 30px;" class="text-uppercase my-5 py-2 text-center font-weight-bold">
-                    Good luck to all participants!</h3>
-              </div>-->
+                <p>
+                  <strong>Dataset Citation:</strong>
+                  <br>
+                  Cunhang Fan, Hongyu Zhang, Qinke Ni, Jingjing Zhang, Jianhua Tao, Jian Zhou, Jiangyan Yi, Zhao Lv, Xiaopei Wu. Seeing helps hearing: A multi-modal dataset and a manba-based dual branch parallel network for auditory attention decoding[J]. Information Fusion, 2025: 102946.
+                </p>
+                <p>
+                  <strong>Paper Citation:</strong>
+                  <br>
+                  Sheng Yan, Cunhang Fan, Hongyu Zhang, Xiaoke Yang, Jianhua Tao, and Zhao Lv. Darnet: Dual attention refinement network with spatiotemporal construction for auditory attention detection[J]. Advances in Neural Information Processing Systems, 2025, 37: 31688-31707.
+                </p>
+              </div>
+
+              <div class="registration-step">
+                <h3>Contact Information</h3>
+                <p>
+                  If you have any questions, please contact us at 
+                  <a href="mailto:cunhang.fan@ahu.edu.cn">cunhang.fan@ahu.edu.cn</a>.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -361,8 +371,86 @@
     </section>
     <!-- End Registration Section -->
 
-    <!-- ======= time Section ======= -->
+    <style>
+      .registration {
+        padding: 60px 0;
+        background-color: #f8f9fa;
+      }
 
+      .section-title h2 {
+        font-size: 32px;
+        font-weight: bold;
+        color: #1f4385;
+        margin-bottom: 10px;
+      }
+
+      .section-title p {
+        font-size: 18px;
+        color: #666;
+      }
+
+      .registration-step {
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .registration-step h3 {
+        color: #1f4385;
+        font-size: 24px;
+        margin-bottom: 15px;
+      }
+
+      .registration-step p {
+        font-size: 16px;
+        color: #333;
+        line-height: 1.6;
+        margin-bottom: 15px;
+      }
+
+      .registration-step ul {
+        margin-left: 20px;
+        margin-bottom: 15px;
+      }
+
+      .registration-step ul li {
+        font-size: 16px;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      .registration-step a {
+        color: #1f4385;
+        text-decoration: none;
+      }
+
+      .registration-step a:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 768px) {
+        .section-title h2 {
+          font-size: 28px;
+        }
+
+        .section-title p {
+          font-size: 16px;
+        }
+
+        .registration-step h3 {
+          font-size: 20px;
+        }
+
+        .registration-step p,
+        .registration-step ul li {
+          font-size: 14px;
+        }
+      }
+    </style>
+    
+    <!-- ======= Timeline Section ======= -->
     <section class="timeline" id="timeline">
       <div class="container">
         <div class="section-title" data-aos="fade-up">
@@ -373,10 +461,10 @@
         <div class="timeline-item" data-aos="fade-left" data-aos-delay="100">
           <div class="timeline-img"></div>
           <div class="timeline-content js--fadeInLeft">
-            <h4>Release of Baseline System, Train and Eval Data</h4>
-            <p class="paragraph">The baseline system, training, and evaluation data will be released for participants to start their work.</p>
+            <h4>Call for Participation Opens</h4>
+            <p class="paragraph">Registration starts for the challenge.</p>
             <div class="d-flex align-items-start flex-column">
-              <div class="date mb-3">21st May 2024</div>
+              <div class="date mb-3">23rd April 2025</div>
             </div>
           </div>
         </div>
@@ -385,10 +473,10 @@
         <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
           <div class="timeline-img"></div>
           <div class="timeline-content js--fadeInRight">
-            <h4>Registration Deadline</h4>
-            <p class="paragraph">The last day for participants to register and join the challenge.</p>
+            <h4>Release of Training Data, Validation Data, Baseline Paper, and Code</h4>
+            <p class="paragraph">Participants can access the training data, validation data, baseline paper, and code to start their work.</p>
             <div class="d-flex align-items-start flex-column">
-              <div class="date mb-3">20th June 2024</div>
+              <div class="date mb-3">28th April 2025</div>
             </div>
           </div>
         </div>
@@ -397,10 +485,10 @@
         <div class="timeline-item" data-aos="fade-left" data-aos-delay="100">
           <div class="timeline-img"></div>
           <div class="timeline-content js--fadeInLeft">
-            <h4>Release of Test Data</h4>
-            <p class="paragraph">The test data will be released for participants to evaluate their models.</p>
+            <h4>Release of Testing Data</h4>
+            <p class="paragraph">The testing data is released for participants to evaluate their models. Registration ends.</p>
             <div class="d-flex align-items-start flex-column">
-              <div class="date mb-3">4th July 2024</div>
+              <div class="date mb-3">15th June 2025</div>
             </div>
           </div>
         </div>
@@ -409,10 +497,10 @@
         <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
           <div class="timeline-img"></div>
           <div class="timeline-content js--fadeInRight">
-            <h4>Final Submission Deadline</h4>
+            <h4>Result Submission Deadline</h4>
             <p class="paragraph">The final deadline for participants to submit their results.</p>
             <div class="d-flex align-items-start flex-column">
-              <div class="date mb-3">6th July 2024</div>
+              <div class="date mb-3">25th June 2025</div>
             </div>
           </div>
         </div>
@@ -421,16 +509,16 @@
         <div class="timeline-item" data-aos="fade-left" data-aos-delay="100">
           <div class="timeline-img"></div>
           <div class="timeline-content js--fadeInLeft">
-            <h4>Release of Results and Rankings</h4>
-            <p class="paragraph">The final results and rankings will be announced.</p>
+            <h4>Release of Challenge Results and Rankings</h4>
+            <p class="paragraph">The final results and rankings of the challenge are announced.</p>
             <div class="d-flex align-items-start flex-column">
-              <div class="date mb-3">8th July 2024</div>
+              <div class="date mb-3">1st July 2025</div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- End time Section -->
+    <!-- End Timeline Section -->
 
     <!-- ======= License Section ======= -->
     <section id="license" class="license">
@@ -441,19 +529,19 @@
 
         <div class="content" style="text-align: justify; font-size: 16px;">
           <p>
-            The AHU dataset is only available for this Chinese AAD challenge and academic research. The following conditions require your compliance:
+            The MM-AAD dataset is only available for this ChineseAAD 2025 challenge and academic research. The following conditions require your compliance:
           </p>
           <ul style="list-style-type: decimal; padding-left: 20px;">
-            <li>References to the AHU dataset need to be included in any work using the dataset.</li>
+            <li>References to the MM-AAD dataset need to be included in any work using the dataset.</li>
             <li>For the baseline research paper, please cite the paper listed on our website.</li>
-            <li>You may not use the AHU dataset or any derivative works for other purposes.</li>
+            <li>You may not use the MM-AAD dataset or any derivative works for other purposes.</li>
           </ul>
           <p>
             All rights not expressly granted to you are reserved by the organizers of this challenge.
           </p>
         </div>
 
-        <!-- List of Potential Participants -->
+        <!-- List of Potential Participants 
         <div class="section-title mt-5" data-aos="fade-up">
           <h2 class="font-weight-bold" style="font-size: 28px;">List of Potential Participants</h2>
         </div>
@@ -461,7 +549,7 @@
           <p>
             The potential participants might include universities and research institutions engaged in EEG and brain-computer interface research, as well as Internet companies involved in EEG-based AI applications and neuroscience-related industries.
           </p>
-        </div>
+        </div>-->
       </div>
     </section>
     <!-- End License Section -->
@@ -684,34 +772,34 @@
         <div class="content px-3">
           <ul>
             <li class="my-1">
-              <i class="bx bx-check-double"></i>Participants are encouraged to share the source code of their submissions.
+              <i class="bx bx-check-double"></i>Participants are encouraged to share the source code at the end of the contest.
             </li>
             <li class="my-1">
-              <i class="bx bx-check-double"></i>Participants commit to using only the AHU dataset training and partition data for the auditory attention decoding task. It is strictly forbidden to use any other EEG datasets.
+              <i class="bx bx-check-double"></i><span style="color: red;">Please note that participants may submit predictions up to five times for each track, but only the last submission will be considered. Each submission must include a brief one-page description of the method used.</span>
             </li>
             <li class="my-1">
-              <i class="bx bx-check-double"></i>Please note that during the evaluation phase, participants are only allowed to submit their final results three times once, and the highest result will be used for the final public ranking.
+              <i class="bx bx-check-double"></i>Participants will be ranked according to the best performance for every single task. If two teams get the same score, the ranking will be determined by the innovation of the employed methods.
             </li>
             <li class="my-1">
-              <i class="bx bx-check-double"></i>Participants are allowed to re-partition the AHU dataset training and processing data as they wish.
+              <i class="bx bx-check-double"></i>Participants are allowed to re-partition the MM-AAD dataset training and processing data as they wish.
             </li>
             <li class="my-1">
-              <i class="bx bx-check-double"></i>Participants should not make direct, public comparisons to the results or rankings of competing teams. This rule also applies to the disclosure of a team’s own ranking, which, by definition, is a comparison to the results and rankings of competing teams.
+              <i class="bx bx-check-double"></i>Test data cannot be used during training. The test sets can be used only to provide output predictions. All parameters should be tuned on the training set. Participants can derive validation sets from the training set.
             </li>
             <li class="my-1">
-              <i class="bx bx-check-double"></i>Teams can, however, publish their own results in terms of evaluation metrics and the like. A summary of the challenge results will also be prepared by the organizers. Any team wishing to retain anonymity should provide an anonymous team identifier with their registration. The organizers reserve the right to adjust this policy prior to the scoring platform closing.
-            </li>
-            <li class="my-1">
-              <i class="bx bx-check-double"></i>Each test subject must be scored independently; techniques such as domain adaptation using the evaluation segments, or any use of evaluation data for score normalization are strictly forbidden.
-            </li>
-            <li class="my-1">
-              <i class="bx bx-check-double"></i>The use of any external supervised pre-trained models is strictly forbidden; any use of such pre-trained models should be described in detail in the submitted system description.
-            </li>
-            <li class="my-1">
-              <i class="bx bx-check-double"></i>The organizers reserve the right to interpret the evaluation rules and to exclude systems from ranking, as well as to exclude teams from future participation in The Chinese Auditory Attention Decoding Challenge if the above rules are not adhered to.
+              <i class="bx bx-check-double"></i>The use of external data (both training data and/or pretrained models) is allowed, if all conditions are met:
+              <ol>
+                <li>The datasets, or pretrained models, are publicly and freely available.</li>
+                <li>Datasets/pretrained models must be available before the start of this challenge.</li>
+                <li>Datasets/model weights used to generate predictions must be cited in the final description and in the final paper.</li>
+                <li>Public pretrained models, trained on private data can be used only after the approval of the organizers.</li>
+              </ol>
             </li>
             <li class="my-1">
               <i class="bx bx-check-double"></i>Participants are requested to strictly follow the organizer's requirements and complete the corresponding tasks within the deadlines set at each stage. If for special reasons they are unable to adhere to the schedule as arranged, they must provide an explanation to the organizers.
+            </li>
+            <li class="my-1">
+              <i class="bx bx-check-double"></i>The organizers reserve the right to interpret the evaluation rules and to exclude systems from ranking, as well as to exclude teams from future participation in The Chinese Auditory Attention Decoding Challenge if the above rules are not adhered to.
             </li>
           </ul>
 
@@ -720,13 +808,13 @@
             <h4 style="font-weight: bold;">Rules for recommending papers</h4>
             <ul>
               <li class="my-1">
-                <i class="bx bx-check-double"></i>The challenge features two separate tasks. Participants can submit to either one track or both. Results should be accompanied by a paper describing the proposed method.
+                <i class="bx bx-check-double"></i>Participants in the challenge can choose to submit entries for one or both of the two separate tracks. <strong>Each participant may submit predictions for each track up to five times, but only the last submission will be considered.</strong> All submissions must include a brief one-page description of the method used.
               </li>
               <li class="my-1">
-                <i class="bx bx-check-double"></i>The top 5 ranked teams will be invited to submit a paper, to be presented at ISCSLP-2024.
+                <i class="bx bx-check-double"></i>The top 5 ranked teams will be awarded with a certificate and invited to submit a paper. Participants will be ranked according to the best performance for every single track. If two teams get the same score, the ranking will be determined by the innovation of the employed methods.
               </li>
               <li class="my-1">
-                <i class="bx bx-check-double"></i>The top 5 teams will be determined as follows: the top 2 teams for track 1 and the top 2 teams for track 2. The fifth team will be chosen as the third-ranking team in the task with the most submissions.
+                <i class="bx bx-check-double"></i>The top 5 teams will consist of the top 2 teams from each track. The fifth team will be chosen as the third-ranking team in the track with the most submissions.
               </li>
             </ul>
           </div>
