@@ -132,18 +132,99 @@
           <div class="col-lg-12" data-aos="fade-left">
             <div class="content pt-4 pt-lg-0 pl-0 pl-lg-3 px-4">
               <div class="track-card">
-                <h3>Track 1: Cross-subject</h3>
-                <p>This track challenges participants to build AAD models capable of decoding auditory attention categories from EEG signals across unseen subjects in audio-visual environments. Participants are provided with data from 30 subjects for training and validation, and data from 10 additional subjects for testing. The goal is to build a generalizable cross-subject decoding model, calculate the decoding accuracy of each subject in the test set, and finally obtain the average decoding accuracy (%).</p>
+                <div class="track-header">
+                  <h3>Track 1: Cross-subject</h3>
+                </div>
+                <div class="track-body">
+                  <p>This track challenges participants to build AAD models capable of decoding auditory attention categories from EEG signals across unseen subjects in audio-visual environments. Participants are provided with data from 30 subjects for training and validation, and data from 10 additional subjects for testing. The goal is to build a generalizable cross-subject decoding model, calculate the decoding accuracy of each subject in the test set, and finally obtain the average decoding accuracy (%).</p>
+                </div>
               </div>
               <div class="track-card">
-                <h3>Track 2: Cross-session</h3>
-                <p>This track requires participants to build an AAD model that can decode auditory attention categories from EEG signals of sessions that the subject has never seen. Data from 30 subjects are provided for training and validation, and data from 10 subjects are provided for testing. The goal is to build a generalizable single-subject cross-session decoding model, calculate the decoding accuracy of each subject in the test set, and finally obtain the average decoding accuracy (%).</p>
+                <div class="track-header">
+                  <h3>Track 2: Cross-session</h3>
+                </div>
+                <div class="track-body">
+                  <p>This track requires participants to build an AAD model that can decode auditory attention categories from EEG signals of sessions that the subject has never seen. Data from 30 subjects are provided for training and validation, and data from 10 subjects are provided for testing. The goal is to build a generalizable single-subject cross-session decoding model, calculate the decoding accuracy of each subject in the test set, and finally obtain the average decoding accuracy (%).</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    <style>
+      .task {
+        padding: 60px 0;
+        background-color: #f8f9fa;
+      }
+
+      .section-title h2 {
+        font-size: 32px;
+        font-weight: bold;
+        color: #1f4385;
+        margin-bottom: 10px;
+      }
+
+      .section-title p {
+        font-size: 18px;
+        color: #666;
+      }
+
+      .track-card {
+        background-color: #fff;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .track-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+
+      .track-header {
+        background-color: #1f4385;
+        padding: 15px 20px;
+      }
+
+      .track-header h3 {
+        color: #fff;
+        font-size: 24px;
+        margin: 0;
+      }
+
+      .track-body {
+        padding: 20px;
+      }
+
+      .track-body p {
+        font-size: 16px;
+        color: #333;
+        line-height: 1.6;
+        margin: 0;
+      }
+
+      @media (max-width: 768px) {
+        .section-title h2 {
+          font-size: 28px;
+        }
+
+        .section-title p {
+          font-size: 16px;
+        }
+
+        .track-header h3 {
+          font-size: 20px;
+        }
+
+        .track-body p {
+          font-size: 14px;
+        }
+      }
+    </style>
     
     <section id="pricing" class="pricing section-bg">
       <div class="container">
