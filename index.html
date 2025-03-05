@@ -772,34 +772,34 @@
         <div class="content px-3">
           <ul>
             <li class="my-1">
-              <i class="bx bx-check-double"></i>Participants are encouraged to share the source code at the end of the contest.
+              <i class="bx bx-check-double"></i>Participants must submit the source code of their final system.
             </li>
             <li class="my-1">
-              <i class="bx bx-check-double"></i><span style="color: red;">Please note that participants may submit predictions up to five times for each track, but only the last submission will be considered. Each submission must include a brief one-page description of the method used.</span>
+              <i class="bx bx-check-double"></i>Only the official **AHU dataset** is permitted for training and validation; using any external EEG dataset is strictly forbidden.
             </li>
             <li class="my-1">
-              <i class="bx bx-check-double"></i>Participants will be ranked according to the best performance for every single task. If two teams get the same score, the ranking will be determined by the innovation of the employed methods.
+              <i class="bx bx-check-double"></i>During the **evaluation phase**, participants can submit their final results **up to three times**, with the highest score used for public ranking.
             </li>
             <li class="my-1">
-              <i class="bx bx-check-double"></i>Participants are allowed to re-partition the MM-AAD dataset training and processing data as they wish.
+              <i class="bx bx-check-double"></i>Participants may **re-partition** the AHU dataset for training and validation as needed.
             </li>
             <li class="my-1">
-              <i class="bx bx-check-double"></i>Test data cannot be used during training. The test sets can be used only to provide output predictions. All parameters should be tuned on the training set. Participants can derive validation sets from the training set.
+              <i class="bx bx-check-double"></i>Public comparisons to other teams’ rankings or results are not allowed. This includes revealing one’s own ranking, which indirectly compares to others.
             </li>
             <li class="my-1">
-              <i class="bx bx-check-double"></i>The use of external data (both training data and/or pretrained models) is allowed, if all conditions are met:
-              <ol>
-                <li>The datasets, or pretrained models, are publicly and freely available.</li>
-                <li>Datasets/pretrained models must be available before the start of this challenge.</li>
-                <li>Datasets/model weights used to generate predictions must be cited in the final description and in the final paper.</li>
-                <li>Public pretrained models, trained on private data can be used only after the approval of the organizers.</li>
-              </ol>
+              <i class="bx bx-check-double"></i>Teams may publish their **own results** (e.g., evaluation metrics). The organizers will also publish a summary of the final challenge results. Teams wishing to remain anonymous should provide an **anonymous team identifier** when registering.
             </li>
             <li class="my-1">
-              <i class="bx bx-check-double"></i>Participants are requested to strictly follow the organizer's requirements and complete the corresponding tasks within the deadlines set at each stage. If for special reasons they are unable to adhere to the schedule as arranged, they must provide an explanation to the organizers.
+              <i class="bx bx-check-double"></i>Each **test subject must be scored independently**; domain adaptation techniques using evaluation segments or score normalization with evaluation data are strictly prohibited.
             </li>
             <li class="my-1">
-              <i class="bx bx-check-double"></i>The organizers reserve the right to interpret the evaluation rules and to exclude systems from ranking, as well as to exclude teams from future participation in The Chinese Auditory Attention Decoding Challenge if the above rules are not adhered to.
+              <i class="bx bx-check-double"></i>Use of **external supervised pre-trained models is strictly forbidden**. Any use of pre-trained models must be **fully disclosed** in the system description.
+            </li>
+            <li class="my-1">
+              <i class="bx bx-check-double"></i>The **organizers have full authority** to interpret the rules, disqualify systems, and ban teams from future **Chinese Auditory Attention Decoding Challenges** if the rules are violated.
+            </li>
+            <li class="my-1">
+              <i class="bx bx-check-double"></i>Participants must follow the official **timeline and deadlines**. If unable to meet the schedule due to exceptional circumstances, they must inform the organizers in advance.
             </li>
           </ul>
 
@@ -808,13 +808,16 @@
             <h4 style="font-weight: bold;">Rules for recommending papers</h4>
             <ul>
               <li class="my-1">
-                <i class="bx bx-check-double"></i>Participants in the challenge can choose to submit entries for one or both of the two separate tracks. <strong>Each participant may submit predictions for each track up to five times, but only the last submission will be considered.</strong> All submissions must include a brief one-page description of the method used.
+                <i class="bx bx-check-double"></i>The challenge consists of **two separate tasks**. Participants may submit to one or both tracks, and submissions must be **accompanied by a paper** describing the proposed method.
               </li>
               <li class="my-1">
-                <i class="bx bx-check-double"></i>The top 5 ranked teams will be awarded with a certificate and invited to submit a paper. Participants will be ranked according to the best performance for every single track. If two teams get the same score, the ranking will be determined by the innovation of the employed methods.
+                <i class="bx bx-check-double"></i>The **top 5 ranked teams** will be invited to submit a paper for **presentation at ISCSLP-2024**.
               </li>
               <li class="my-1">
-                <i class="bx bx-check-double"></i>The top 5 teams will consist of the top 2 teams from each track. The fifth team will be chosen as the third-ranking team in the track with the most submissions.
+                <i class="bx bx-check-double"></i>The **top 5 teams** will be determined as follows:  
+                - **Top 2 teams** from Track 1  
+                - **Top 2 teams** from Track 2  
+                - The **fifth team** will be the **third-ranking** team in the track with the highest number of submissions.
               </li>
             </ul>
           </div>
@@ -826,6 +829,8 @@
     </div>
   </div>
 </div>
+
+  
 <!-- Competition Modal -->
 <div class="modal fade" id="competition" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
