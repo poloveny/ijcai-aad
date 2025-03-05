@@ -105,10 +105,10 @@
             <div class="content pt-4 pt-lg-0 pl-0 pl-lg-3 px-4 text-center"> <!-- 添加 text-center 使文字居中 -->
             <!--<div class="content pt-4 pt-lg-0 pl-0 pl-lg-3 px-4">-->
               <p class="lh-lg" style="text-align: justify;">
-                A cocktail party is an interesting scene that manifests itself as the voices of multiple speakers mixed, as if at a raucous social gathering. The challenge in this scene is to find a way to identify the sound source of interest to the listener when multiple sound sources are present at the same time. In recent years, the study of <strong>auditory attention decoding (AAD)</strong> based on EEG signals has become a very promising solution, which is devoted to decoding the speech/spatial orientation of the listener from the EEG signal in the multi-speaker scene. One of the tasks of auditory attention decoding is to identify and locate the spatial orientation of the speaker in the multi-person speaking environment by analyzing the EEG signal of the listener. Therefore, when an efficient and robust auditory attention decoding algorithm is integrated into the hearing aid device, it can help the hearing impaired to capture the target sound more accurately, ignore the interfering sound, and improve the hearing performance in the multi-speaker scene. Since the existing public datasets are all EEG data of subjects collected in scenes with only auditory stimuli, auditory attention in real scenes is usually accompanied by visual and auditory input at the same time. 
+                <strong>Auditory attention decoding (AAD)</strong> is a cutting-edge research area in computational neuroscience and brain-computer interfaces, aiming to decode an individual's focus of attention from neural signals such as EEG in multiple sound sources. One of the tasks of AAD is to identify and locate the spatial orientation of the speaker in the multi-person speaking environment by analyzing the EEG signal of the listener. This capability holds transformative potential for hearing aid applications. By enabling the hearing-impaired to accurately capture target sounds while suppressing interference, it significantly improves auditory performance in multi-speaker environments. 
               </p>
               <p class="lh-lg" style="text-align: justify;">
-                We provide an <strong>AHU dataset</strong> consisting of EEG data collected from 10 subjects each in the audio-only scene, the audio-video scene, who listened to the two-speaker stimulus for an average of 40 minutes, totaling about 13.3 hours of data. In the chinese auditory attention decoding challenge, the team will compete to build the best deep learning model to analyze the spatial orientation (left/right, 0/1) of the subject's attention to the speaker from the EEG signal.
+                While recent advancements have demonstrated promising results under auditory-only condition, existing methods often struggle with real-world scenarios due to challenges like multi-modal stimules, inter-subject variability, and session-specific noise. Therefore, we hold this challenge that bring together researchers around the world to further discuss recent research and future directions for robust auditory attention decoding. We provide a <strong>multi-modal AAD (MM-AAD)</strong>strong> dataset consisting of EEG data collected from 40 subjects each in the audio-only scene, the audio-visual scene, who listened to the two-speaker stimulus for an average of 55 minutes, totaling about 73.3 hours of data. In the chinese auditory attention decoding challenge, the team will compete to build the best deep learning model to analyze the spatial orientation (left/right, 0/1) of the subject's attention to the speaker from the EEG signal.
               </p>
               <div style="background-color: #1f4385;" class="mx-5 rounded">
                 <!--
@@ -122,9 +122,6 @@
     </section>
     <!-- End About Us Section -->
     
-    
-    
-    <!-- ======= Task Section ======= -->
     <section id="task" class="task">
       <div class="container">
         <div class="section-title" data-aos="fade-up">
@@ -133,47 +130,20 @@
         </div>
         <div class="row">
           <div class="col-lg-12" data-aos="fade-left">
-            <div class="content pt-4 pt-lg-0 pl-0 pl-lg-3 px-4 text-center">
-              <p class="lh-lg" style="text-align: justify;">
-                <strong>Track 1.</strong> Single-subject (SS): The audio-only task and audio-video task are included. 
-                The data of each subject is divided into training, validation, and testing according to 8:1:1. 
-                The goal of participants is to build a single-subject decoding model, calculate the accuracy for each subject on the test set, 
-                and finally get an average decoding accuracy (%).
-              </p>
-              <p class="lh-lg" style="text-align: justify;">
-                <span style="margin-left: 20px;"><strong>Track 1.1.</strong> audio-only task (SS-AO): Average decoding accuracy (%) for 
-                <strong>8 subjects</strong> in the audio-only scene.</span>
-              </p>
-              <p class="lh-lg" style="text-align: justify;">
-                <span style="margin-left: 20px;"><strong>Track 1.2.</strong> audio-video task (SS-AV): Average decoding accuracy (%) for 
-                <strong>8 subjects</strong> in the audio-video scene.</span>
-              </p>
-              <p class="lh-lg" style="text-align: justify;">
-                <strong>Track 2.</strong> Cross-subject (CS): The audio-only task and audio-video task are included. 
-                Each scene gives data on <strong>8 subjects</strong> for training and validation, and <strong>2</strong> for testing. 
-                The goal of participants is to build a cross-subject decoding model, calculate the decoding accuracy of each subject in the test set, 
-                and finally obtain the average decoding accuracy (%).
-              </p>
-              <p class="lh-lg" style="text-align: justify;">
-                <span style="margin-left: 20px;"><strong>Track 2.1.</strong> audio-only task (CS-AO): Average decoding accuracy (%) for 
-                <strong>2 subjects</strong> in the audio-only scene.</span>
-              </p>
-              <p class="lh-lg" style="text-align: justify;">
-                <span style="margin-left: 20px;"><strong>Track 2.2.</strong> audio-video task (CS-AV): Average decoding accuracy (%) for 
-                <strong>2 subjects</strong> in the audio-video scene.</span>
-              </p>
-               <!--
-              <div style="background-color: #1f4385;" class="mx-5 rounded">
-                <h3 style="color:#fff;font-size: 30px;" class="text-uppercase my-5 py-2 text-center font-weight-bold">
-                    Good luck to all participants!</h3>
-              </div>-->
+            <div class="content pt-4 pt-lg-0 pl-0 pl-lg-3 px-4">
+              <div class="track-card">
+                <h3>Track 1: Cross-subject</h3>
+                <p>This track challenges participants to build AAD models capable of decoding auditory attention categories from EEG signals across unseen subjects in audio-visual environments. Participants are provided with data from 30 subjects for training and validation, and data from 10 additional subjects for testing. The goal is to build a generalizable cross-subject decoding model, calculate the decoding accuracy of each subject in the test set, and finally obtain the average decoding accuracy (%).</p>
+              </div>
+              <div class="track-card">
+                <h3>Track 2: Cross-session</h3>
+                <p>This track requires participants to build an AAD model that can decode auditory attention categories from EEG signals of sessions that the subject has never seen. Data from 30 subjects are provided for training and validation, and data from 10 subjects are provided for testing. The goal is to build a generalizable single-subject cross-session decoding model, calculate the decoding accuracy of each subject in the test set, and finally obtain the average decoding accuracy (%).</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- End Task Section -->
-
     
     <section id="pricing" class="pricing section-bg">
       <div class="container">
